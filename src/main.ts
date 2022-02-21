@@ -8,9 +8,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Webshop Backend')
+    .setTitle('Slowly Adventures')
     .addServer('http://localhost:4000/api')
-    .setDescription('The webshop api description')
+    .setDescription('Slowly Adventrues backend')
     .setVersion('0.1')
     .build();
   const document = SwaggerModule.createDocument(app, config);
