@@ -6,12 +6,13 @@ export class AbilitySeed1645534061730 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         abilities.map(
-            async (ability) =>
-                await queryRunner.query(`INSERT INTO 'ability' (name, staminaCoast, damage) VALUES ('${ability.name}', ${ability.staminaCoast}, ${ability.damage});`)
+            async (ability) => {
+                await queryRunner.query(`INSERT INTO ability (name, staminaCoast, damage) VALUES ('${ability.name}', ${ability.staminaCoast}, ${ability.damage});`)
+            }
         )
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.query(`DELETE * FROM ability`);
+        await queryRunner.query(`DELETE * FROM ability;`);
     }
 }

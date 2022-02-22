@@ -12,7 +12,7 @@ export const characters: Charcter[] = [
         speed: 100,
         strength: 100,
         stamina: 100,
-        abilityID: 1,
+        abilityID: 2,
     },
     {
         name: 'Mario',

@@ -15,7 +15,7 @@ export class Ability {
     @Column()
     damage: number;
 
-    // @OneToMany(() => Character, (character) => character.ability)
-    // @JoinColumn({ name: "character" })
-    // characters: Character[];
+    @OneToMany(() => Character, (character) => character.ability)
+    @JoinColumn({ name: "characterIDS" })
+    characters: Character[];
 }
