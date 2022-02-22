@@ -13,9 +13,9 @@ export class Player {
     @Column()
     nickname: string;
 
-    @ManyToOne(() => Character, (character) => character.players)
-    @JoinColumn({ name: "characterID" })
-    character: Character;
+    // @ManyToOne(() => Character, (character) => character.players)
+    // @JoinColumn({ name: "characterID" })
+    // character: Character;
 
     @ManyToOne(() => Weapon, (weapon) => weapon.players)
     @JoinColumn({ name: "weaponID" })

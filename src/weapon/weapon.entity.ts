@@ -11,7 +11,7 @@ export class Weapon {
     name: string;
 
     @Column()
-    damge: number;
+    damage: number;
 
     @OneToMany(() => Rarity, (rarity) => rarity.weapons)
     @JoinColumn({ name: "rarityID" })

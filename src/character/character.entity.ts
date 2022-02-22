@@ -19,11 +19,11 @@ export class Character {
     @Column()
     stamina: number;
 
-    @ManyToOne(() => Ability, (ability) => ability.characters)
-    @JoinColumn({ name: "abilityID" })
-    ability: Ability;
+    // @ManyToOne(() => Ability, (ability) => ability.characters)
+    // @JoinColumn({ name: "ability" })
+    // ability: Ability;
 
-    @OneToMany(() => Player, (player) => player.character)
-    @JoinColumn({ name: "playerIDS" })
-    players: Player[];
+    // @OneToMany(() => Player, (player) => player.character)
+    // @JoinColumn({ name: "player" })
+    // players: Player[];
 }

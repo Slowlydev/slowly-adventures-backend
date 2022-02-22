@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { getConnectionOptions } from 'typeorm';
+import { AbilityModule } from './ability/ability.module';
+import { CharacterModul } from './character/character.module';
 
 @Module({
   imports: [
@@ -10,6 +12,8 @@ import { getConnectionOptions } from 'typeorm';
           autoLoadEntities: true,
         }),
     }),
+    AbilityModule,
+    CharacterModul,
   ],
   controllers: [],
   providers: [],
