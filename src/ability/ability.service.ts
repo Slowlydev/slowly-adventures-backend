@@ -11,7 +11,7 @@ export class AbilityService {
         return this.abilityRepository.find();
     }
 
-    async findOneAbility(id: Ability['id']): Promise<Ability> {
+    async findOneAbility(id: Ability["id"]): Promise<Ability> {
         return this.abilityRepository.findOne(id);
     }
 
@@ -23,7 +23,7 @@ export class AbilityService {
         return this.abilityRepository.save(request);
     }
 
-    async removeOneAbility(id: Ability['id']): Promise<Ability> {
+    async removeOneAbility(id: Ability["id"]): Promise<Ability> {
         const ability = await this.abilityRepository.findOne(id);
 
         if (!ability) {

@@ -14,7 +14,7 @@ export class CharacterService {
         return this.characterRepository.find({ relations: ["ability"] });
     }
 
-    async findOneCharacter(id: Character['id']): Promise<Character> {
+    async findOneCharacter(id: Character["id"]): Promise<Character> {
         const character = await this.characterRepository.findOne(id);
 
         if (!character) {
@@ -32,7 +32,7 @@ export class CharacterService {
         return this.characterRepository.save(request);
     }
 
-    async removeOneCharacter(id: Character['id']): Promise<Character> {
+    async removeOneCharacter(id: Character["id"]): Promise<Character> {
         const character = await this.characterRepository.findOne(id);
 
 

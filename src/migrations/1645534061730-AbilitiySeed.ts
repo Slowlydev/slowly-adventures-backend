@@ -1,8 +1,8 @@
-import { MigrationInterface, QueryRunner } from 'typeorm';
-import { abilities } from './seed/ability.seed';
+import { MigrationInterface, QueryRunner } from "typeorm";
+import { abilities } from "./seed/ability.seed";
 
 export class AbilitySeed1645534061730 implements MigrationInterface {
-    name = 'AbilitySeed1645534061730'
+    name = "AbilitySeed1645534061730"
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         abilities.map(

@@ -6,12 +6,12 @@ type Ability = {
 
 export const abilities: Ability[] = [
     {
-        name: 'Super Fire Ball Cool thing',
+        name: "Super Fire Ball Cool thing",
         staminaCoast: 10,
         damage: 20,
     },
     {
-        name: 'Super Destroying Laser beam',
+        name: "Super Destroying Laser beam",
         staminaCoast: 100,
         damage: 100,
     }

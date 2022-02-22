@@ -1,8 +1,8 @@
-import { MigrationInterface, QueryRunner } from 'typeorm';
-import { characters } from './seed/character.seed';
+import { MigrationInterface, QueryRunner } from "typeorm";
+import { characters } from "./seed/character.seed";
 
 export class CharacterSeed1645534061731 implements MigrationInterface {
-    name = 'CharacterSeed1645534061731';
+    name = "CharacterSeed1645534061731";
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         characters.map(

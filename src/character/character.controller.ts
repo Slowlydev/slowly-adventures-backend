@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common"
 import { Character } from "./character.entity";
 import { CharacterService } from "./character.service";
 
-@Controller('/character')
+@Controller("/character")
 export class CharacterController {
     constructor(private readonly characterService: CharacterService) { }
 
@@ -11,8 +11,8 @@ export class CharacterController {
         return this.characterService.findAllCharacters();
     };
 
-    @Get(':id')
-    async getCharacter(@Param('id') id: Character['id']): Promise<Character> {
+    @Get(":id")
+    async getCharacter(@Param("id") id: Character["id"]): Promise<Character> {
         return this.characterService.findOneCharacter(id);
     }
 
@@ -26,8 +26,8 @@ export class CharacterController {
         return this.characterService.updateCharacter(request);
     }
 
-    @Delete(':id')
-    async deleteOneCharacter(@Param('id') id: Character['id']): Promise<Character> {
+    @Delete(":id")
+    async deleteOneCharacter(@Param("id") id: Character["id"]): Promise<Character> {
         return this.characterService.removeOneCharacter(id);
     }
 

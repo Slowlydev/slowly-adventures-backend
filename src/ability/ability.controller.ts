@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { AbilityService } from "./ability.service"
-import { Ability } from './ability.entity';
+import { Ability } from "./ability.entity";
 
-@Controller('/ability')
+@Controller("/ability")
 export class AbilityController {
     constructor(private readonly abilityService: AbilityService) { }
 
@@ -11,8 +11,8 @@ export class AbilityController {
         return this.abilityService.findAllAbilities()
     }
 
-    @Get(':id')
-    async getApility(@Param('id') id: Ability['id']): Promise<Ability> {
+    @Get(":id")
+    async getAbility(@Param("id") id: Ability["id"]): Promise<Ability> {
         return this.abilityService.findOneAbility(id);
     }
 
@@ -26,8 +26,8 @@ export class AbilityController {
         return this.abilityService.updateAbility(request);
     }
 
-    @Delete(':id')
-    async deleteAbility(@Param('id') id: Ability['id']): Promise<Ability> {
+    @Delete(":id")
+    async deleteAbility(@Param("id") id: Ability["id"]): Promise<Ability> {
         return this.abilityService.removeOneAbility(id);
     }
 
