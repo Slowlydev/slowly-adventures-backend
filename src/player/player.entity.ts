@@ -1,6 +1,6 @@
 import { Character } from "src/character/character.entity";
 import { Clothing } from "src/clothing/clothing.entity";
-import { Home } from "src/home/home.entity";
+import { PlayerHome } from "src/playerHomes/playerHomes.entity";
 import { PlayerItem } from "src/playerItems/playerItems.entity";
 import { Weapon } from "src/weapon/weapon.entity";
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
@@ -13,9 +13,9 @@ export class Player {
     @Column()
     nickname: string;
 
-    // @ManyToOne(() => Character, (character) => character.players)
-    // @JoinColumn({ name: "characterID" })
-    // character: Character;
+    @ManyToOne(() => Character, (character) => character.players)
+    @JoinColumn({ name: "characterID" })
+    character: Character;
 
     @ManyToOne(() => Weapon, (weapon) => weapon.players)
     @JoinColumn({ name: "weaponID" })
@@ -25,9 +25,9 @@ export class Player {
     @JoinColumn({ name: "clothingID" })
     clothing: Clothing;
 
-    @ManyToMany(() => Home, (home) => home.players)
-    @JoinTable({ name: "playersHomes" })
-    homes: Home[];
+    @OneToMany(() => PlayerHome, (playerHome) => playerHome)
+    @JoinColumn({ name: "playerHomeIDS" })
+    playerHomes: PlayerHome[];
 
     @OneToMany(() => PlayerItem, (playerItem) => playerItem.player)
     @JoinColumn({ name: "playerItemIDS" })

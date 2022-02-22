@@ -1,5 +1,5 @@
-import { Player } from "src/player/player.entity";
-import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { PlayerHome } from "src/playerHomes/playerHomes.entity";
+import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("home")
 export class Home {
@@ -18,7 +18,7 @@ export class Home {
     @Column()
     price: number;
 
-    @ManyToMany(() => Player, (player) => player.homes)
-    @JoinTable({ name: "playersHomes" })
-    players: Player[];
+    @OneToMany(() => PlayerHome, (playerHome) => playerHome)
+    @JoinColumn({ name: "playerHomeIDS" })
+    playerHomes: PlayerHome[];
 }
