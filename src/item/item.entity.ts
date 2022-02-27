@@ -10,6 +10,9 @@ export class Item {
     @Column()
     name: string;
 
+    @Column()
+    description: string;
+
     @ManyToOne(() => Rarity, (rarity) => rarity.items)
     @JoinColumn({ name: "rarityID" })
     rarity: Rarity;

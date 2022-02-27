@@ -5,6 +5,7 @@ import { AbilityModule } from "./ability/ability.module";
 import { CharacterModul } from "./character/character.module";
 import { ClothingModule } from "./clothing/clothing.module";
 import { RarityModule } from "./rarity/rarity.module";
+import { WeaponModule } from "./weapon/weapon.module";
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { RarityModule } from "./rarity/rarity.module";
     CharacterModul,
     ClothingModule,
     RarityModule,
+    WeaponModule,
   ],
   controllers: [],
   providers: [],

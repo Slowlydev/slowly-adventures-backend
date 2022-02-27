@@ -1,6 +1,6 @@
 import { Player } from "src/player/player.entity";
 import { Rarity } from "src/rarity/rarity.entity";
-import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("cloting")
 export class Clothing {
@@ -16,7 +16,7 @@ export class Clothing {
     @Column()
     protection: number;
 
-    @OneToMany(() => Rarity, (rarity) => rarity.clothings)
+    @ManyToOne(() => Rarity, (rarity) => rarity.clothings)
     @JoinColumn({ name: "rarityID" })
     rarity: Rarity;
 
