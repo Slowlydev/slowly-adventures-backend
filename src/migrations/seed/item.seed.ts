@@ -28,7 +28,7 @@ export const items: Item[] = [
     {
         name: "Titanium",
         description: "The rarest material in this world, ur rich for life",
-        rarityID: 5,
+        rarityID: 10,
     },
     {
         name: "Steel",
@@ -44,5 +44,15 @@ export const items: Item[] = [
         name: "Weed",
         description: "Used to make bread",
         rarityID: 2,
+    },
+    {
+        name: "Sand",
+        description: "Used to make glass",
+        rarityID: 3,
+    },
+    {
+        name: "Moon Stone",
+        description: "A almost unobtainable material for non astronouts",
+        rarityID: 8,
     }
 ]
