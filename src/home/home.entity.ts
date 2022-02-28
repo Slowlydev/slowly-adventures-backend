@@ -13,7 +13,7 @@ export class Home {
     location: string;
 
     @Column()
-    stroage: number;
+    storage: number;
 
     @Column()
     price: number;
