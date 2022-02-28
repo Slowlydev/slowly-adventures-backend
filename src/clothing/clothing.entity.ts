@@ -2,7 +2,7 @@ import { Player } from "src/player/player.entity";
 import { Rarity } from "src/rarity/rarity.entity";
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("cloting")
+@Entity("clothing")
 export class Clothing {
     @PrimaryGeneratedColumn()
     id: number;

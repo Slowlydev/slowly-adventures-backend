@@ -4,6 +4,9 @@ import { getConnectionOptions } from "typeorm";
 import { AbilityModule } from "./ability/ability.module";
 import { CharacterModul } from "./character/character.module";
 import { ClothingModule } from "./clothing/clothing.module";
+import { HomeModule } from "./home/home.module";
+import { ItemModule } from "./item/item.module";
+import { PlayerItemModule } from "./playerItems/playerItems.module";
 import { RarityModule } from "./rarity/rarity.module";
 import { WeaponModule } from "./weapon/weapon.module";
 
@@ -20,6 +23,9 @@ import { WeaponModule } from "./weapon/weapon.module";
     ClothingModule,
     RarityModule,
     WeaponModule,
+    ItemModule,
+    HomeModule,
+    PlayerItemModule,
   ],
   controllers: [],
   providers: [],

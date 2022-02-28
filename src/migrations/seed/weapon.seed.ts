@@ -8,7 +8,7 @@ export const weapons: Weapon[] = [
   {
     name: "Master Sword",
     damage: 200,
-    rarity: 5
+    rarity: 10
   },
   {
     name: "Sword",

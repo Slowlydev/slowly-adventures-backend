@@ -16,6 +16,21 @@ export const rarities: Rarity[] = [
     name: "Epic",
   },
   {
+    name: 'Mythic'
+  },
+  {
+    name: 'Divine'
+  },
+  {
+    name: 'Special'
+  },
+  {
+    name: 'Very Special'
+  },
+  {
     name: "Legendary",
   },
+  {
+    name: 'Unobtainable'
+  }
 ]

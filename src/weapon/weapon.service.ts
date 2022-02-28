@@ -8,11 +8,11 @@ export class WeaponService {
   constructor(@InjectRepository(Weapon) private readonly weaponRepository: Repository<Weapon>) { }
 
   async findAllWeapons(): Promise<Weapon[]> {
-    return this.weaponRepository.find();
+    return this.weaponRepository.find({ relations: ['rarity'] });
   }
 
   async findOneWeapon(id: Weapon["id"]): Promise<Weapon> {
-    return this.weaponRepository.findOne(id);
+    return this.weaponRepository.findOne(id, { relations: ['rarity'] });
   }
 
   async createWeapon(request: Weapon): Promise<Weapon> {

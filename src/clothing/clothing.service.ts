@@ -8,11 +8,11 @@ export class ClothingService {
   constructor(@InjectRepository(Clothing) private readonly clothingRepository: Repository<Clothing>) { }
 
   async findAllClothings(): Promise<Clothing[]> {
-    return this.clothingRepository.find();
+    return this.clothingRepository.find({ relations: ['rarity'] });
   }
 
   async findOneClothing(id: Clothing["id"]): Promise<Clothing> {
-    return this.clothingRepository.findOne(id);
+    return this.clothingRepository.findOne(id, { relations: ['rarity'] });
   }
 
   async createClothing(request: Clothing): Promise<Clothing> {
