@@ -6,6 +6,7 @@ import { CharacterModul } from "./character/character.module";
 import { ClothingModule } from "./clothing/clothing.module";
 import { HomeModule } from "./home/home.module";
 import { ItemModule } from "./item/item.module";
+import { PlayerModule } from "./player/player.module";
 import { PlayerItemModule } from "./playerItems/playerItems.module";
 import { RarityModule } from "./rarity/rarity.module";
 import { WeaponModule } from "./weapon/weapon.module";
@@ -26,6 +27,7 @@ import { WeaponModule } from "./weapon/weapon.module";
     ItemModule,
     HomeModule,
     PlayerItemModule,
+    PlayerModule
   ],
   controllers: [],
   providers: [],
