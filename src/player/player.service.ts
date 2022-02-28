@@ -8,11 +8,11 @@ export class PlayerService {
 	constructor(@InjectRepository(Player) private readonly playerRepository: Repository<Player>) { }
 
 	async findAllPlayers(): Promise<Player[]> {
-		return this.playerRepository.find({ relations: ['character', 'weapon', 'clothing', 'playerHomes', 'playerItems'] });
+		return this.playerRepository.find({ relations: ['character', 'weapon', 'clothing', 'playerHomes', 'playerItems', 'playerHomes.home', 'playerItems.item'] });
 	}
 
 	async findOnePlayer(id: Player["id"]): Promise<Player> {
-		return this.playerRepository.findOne(id, { relations: ['character', 'weapon', 'clothing', 'playerHomes', 'playerItems'] })
+		return this.playerRepository.findOne(id, { relations: ['character', 'weapon', 'clothing', 'playerHomes', 'playerItems', 'playerHomes.home', 'playerItems.item'] })
 	}
 
 	async createPlayer(request: Player): Promise<Player> {
