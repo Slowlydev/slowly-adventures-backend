@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { AbilityService } from "./ability.service"
 import { Ability } from "./ability.entity";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("ability")
 @Controller("/ability")
 export class AbilityController {
 	constructor(private readonly abilityService: AbilityService) { }

@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { WeaponService } from "./weapon.service"
 import { Weapon } from "./weapon.entity";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("weapon")
 @Controller("/weapon")
 export class WeaponController {
   constructor(private readonly weaponSerivce: WeaponService) { }

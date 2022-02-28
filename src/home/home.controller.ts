@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { ApiTags } from "@nestjs/swagger";
 import { Home } from "./home.entity";
 import { HomeService } from "./home.service";
 
+@ApiTags("home")
 @Controller("/home")
 export class HomeController {
 	constructor(private readonly homeService: HomeService) { }

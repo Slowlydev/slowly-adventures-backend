@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { PlayerHomeService } from "./playerHomes.service"
 import { PlayerHome } from "./playerHomes.entity";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("player-homes")
 @Controller("/player-homes")
 export class PlayerHomeController {
 	constructor(private readonly playerHomeService: PlayerHomeService) { }

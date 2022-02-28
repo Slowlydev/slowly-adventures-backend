@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { PlayerService } from "./player.service"
 import { Player } from "./player.entity";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("player")
 @Controller("/player")
 export class PlayerController {
 	constructor(private readonly playerService: PlayerService) { }

@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { RarityService } from "./rarity.service"
 import { Rarity } from "./rarity.entity";
+import { ApiTags } from "@nestjs/swagger";
 
+@ApiTags("rarity")
 @Controller("/rarity")
 export class RarityController {
   constructor(private readonly rarityService: RarityService) { }
