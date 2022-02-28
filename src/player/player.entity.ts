@@ -3,7 +3,7 @@ import { Clothing } from "src/clothing/clothing.entity";
 import { PlayerHome } from "src/playerHomes/playerHomes.entity";
 import { PlayerItem } from "src/playerItems/playerItems.entity";
 import { Weapon } from "src/weapon/weapon.entity";
-import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("player")
 export class Player {
@@ -25,7 +25,7 @@ export class Player {
     @JoinColumn({ name: "clothingID" })
     clothing: Clothing;
 
-    @OneToMany(() => PlayerHome, (playerHome) => playerHome)
+    @OneToMany(() => PlayerHome, (playerHome) => playerHome.player)
     @JoinColumn({ name: "playerHomeIDS" })
     playerHomes: PlayerHome[];
 
