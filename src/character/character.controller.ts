@@ -4,35 +4,35 @@ import { CharacterService } from "./character.service";
 
 @Controller("/character")
 export class CharacterController {
-    constructor(private readonly characterService: CharacterService) { }
+	constructor(private readonly characterService: CharacterService) { }
 
-    @Get()
-    async getCharacters(): Promise<Character[]> {
-        return this.characterService.findAllCharacters();
-    };
+	@Get()
+	async getCharacters(): Promise<Character[]> {
+		return this.characterService.findAllCharacters();
+	};
 
-    @Get(":id")
-    async getCharacter(@Param("id") id: Character["id"]): Promise<Character> {
-        return this.characterService.findOneCharacter(id);
-    }
+	@Get(":id")
+	async getCharacter(@Param("id") id: Character["id"]): Promise<Character> {
+		return this.characterService.findOneCharacter(id);
+	}
 
-    @Post()
-    async postCharacter(@Body() request: Character): Promise<Character> {
-        return this.characterService.createCharacter(request);
-    }
+	@Post()
+	async postCharacter(@Body() request: Character): Promise<Character> {
+		return this.characterService.createCharacter(request);
+	}
 
-    @Put()
-    async putCharacter(@Body() request: Character): Promise<Character> {
-        return this.characterService.updateCharacter(request);
-    }
+	@Put()
+	async putCharacter(@Body() request: Character): Promise<Character> {
+		return this.characterService.updateCharacter(request);
+	}
 
-    @Delete(":id")
-    async deleteOneCharacter(@Param("id") id: Character["id"]): Promise<Character> {
-        return this.characterService.removeOneCharacter(id);
-    }
+	@Delete(":id")
+	async deleteOneCharacter(@Param("id") id: Character["id"]): Promise<Character> {
+		return this.characterService.removeOneCharacter(id);
+	}
 
-    @Delete()
-    async deleteAllCharacters(): Promise<Character[]> {
-        return this.characterService.removeAllCharacters();
-    }
+	@Delete()
+	async deleteAllCharacters(): Promise<Character[]> {
+		return this.characterService.removeAllCharacters();
+	}
 }

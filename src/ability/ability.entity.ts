@@ -3,19 +3,19 @@ import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "t
 
 @Entity("ability")
 export class Ability {
-    @PrimaryGeneratedColumn()
-    id: number;
+	@PrimaryGeneratedColumn()
+	id: number;
 
-    @Column()
-    name: string;
+	@Column()
+	name: string;
 
-    @Column()
-    staminaCoast: number;
+	@Column()
+	staminaCoast: number;
 
-    @Column()
-    damage: number;
+	@Column()
+	damage: number;
 
-    @OneToMany(() => Character, (character) => character.ability)
-    @JoinColumn({ name: "characterIDS" })
-    characters: Character[];
+	@OneToMany(() => Character, (character) => character.ability)
+	@JoinColumn({ name: "characterIDS" })
+	characters: Character[];
 }

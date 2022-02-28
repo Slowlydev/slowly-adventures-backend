@@ -5,8 +5,8 @@ import { Home } from "./home.entity";
 import { HomeService } from "./home.service";
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Home])],
-    providers: [HomeService],
-    controllers: [HomeController]
+	imports: [TypeOrmModule.forFeature([Home])],
+	providers: [HomeService],
+	controllers: [HomeController]
 })
 export class HomeModule { }

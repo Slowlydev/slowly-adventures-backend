@@ -4,26 +4,26 @@ import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColum
 
 @Entity("character")
 export class Character {
-    @PrimaryGeneratedColumn()
-    id: number;
+	@PrimaryGeneratedColumn()
+	id: number;
 
-    @Column()
-    name: string;
+	@Column()
+	name: string;
 
-    @Column()
-    speed: number;
+	@Column()
+	speed: number;
 
-    @Column()
-    strength: number;
+	@Column()
+	strength: number;
 
-    @Column()
-    stamina: number;
+	@Column()
+	stamina: number;
 
-    @ManyToOne(() => Ability, (ability) => ability.characters)
-    @JoinColumn({ name: "abilityID" })
-    ability: Ability;
+	@ManyToOne(() => Ability, (ability) => ability.characters)
+	@JoinColumn({ name: "abilityID" })
+	ability: Ability;
 
-    @OneToMany(() => Player, (player) => player.character)
-    @JoinColumn({ name: "player" })
-    players: Player[];
+	@OneToMany(() => Player, (player) => player.character)
+	@JoinColumn({ name: "player" })
+	players: Player[];
 }

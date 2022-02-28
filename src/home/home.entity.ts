@@ -3,22 +3,22 @@ import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "t
 
 @Entity("home")
 export class Home {
-    @PrimaryGeneratedColumn()
-    id: number;
+	@PrimaryGeneratedColumn()
+	id: number;
 
-    @Column()
-    name: string;
+	@Column()
+	name: string;
 
-    @Column()
-    location: string;
+	@Column()
+	location: string;
 
-    @Column()
-    storage: number;
+	@Column()
+	storage: number;
 
-    @Column()
-    price: number;
+	@Column()
+	price: number;
 
-    @OneToMany(() => PlayerHome, (playerHome) => playerHome)
-    @JoinColumn({ name: "playerHomeIDS" })
-    playerHomes: PlayerHome[];
+	@OneToMany(() => PlayerHome, (playerHome) => playerHome)
+	@JoinColumn({ name: "playerHomeIDS" })
+	playerHomes: PlayerHome[];
 }

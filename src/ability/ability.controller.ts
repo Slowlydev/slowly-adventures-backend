@@ -4,35 +4,35 @@ import { Ability } from "./ability.entity";
 
 @Controller("/ability")
 export class AbilityController {
-    constructor(private readonly abilityService: AbilityService) { }
+	constructor(private readonly abilityService: AbilityService) { }
 
-    @Get()
-    async getAbilities(): Promise<Ability[]> {
-        return this.abilityService.findAllAbilities()
-    }
+	@Get()
+	async getAbilities(): Promise<Ability[]> {
+		return this.abilityService.findAllAbilities()
+	}
 
-    @Get(":id")
-    async getAbility(@Param("id") id: Ability["id"]): Promise<Ability> {
-        return this.abilityService.findOneAbility(id);
-    }
+	@Get(":id")
+	async getAbility(@Param("id") id: Ability["id"]): Promise<Ability> {
+		return this.abilityService.findOneAbility(id);
+	}
 
-    @Post()
-    async postAbility(@Body() request: Ability): Promise<Ability> {
-        return this.abilityService.createAbility(request);
-    }
+	@Post()
+	async postAbility(@Body() request: Ability): Promise<Ability> {
+		return this.abilityService.createAbility(request);
+	}
 
-    @Put()
-    async putAbility(@Body() request: Ability): Promise<Ability> {
-        return this.abilityService.updateAbility(request);
-    }
+	@Put()
+	async putAbility(@Body() request: Ability): Promise<Ability> {
+		return this.abilityService.updateAbility(request);
+	}
 
-    @Delete(":id")
-    async deleteAbility(@Param("id") id: Ability["id"]): Promise<Ability> {
-        return this.abilityService.removeOneAbility(id);
-    }
+	@Delete(":id")
+	async deleteAbility(@Param("id") id: Ability["id"]): Promise<Ability> {
+		return this.abilityService.removeOneAbility(id);
+	}
 
-    @Delete()
-    async deleteAbilities(): Promise<Ability[]> {
-        return this.abilityService.removeAllAbilities();
-    }
+	@Delete()
+	async deleteAbilities(): Promise<Ability[]> {
+		return this.abilityService.removeAllAbilities();
+	}
 }

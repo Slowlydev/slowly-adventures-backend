@@ -12,27 +12,27 @@ export class PlayerItemsController {
   }
 
   @Get(":id")
-  async getRarity(@Param("id") id: PlayerItem["id"]): Promise<PlayerItem> {
+  async getPlayerItem(@Param("id") id: PlayerItem["id"]): Promise<PlayerItem> {
     return this.playerItemService.findOnePlayerItem(id);
   }
 
   @Post()
-  async postRarity(@Body() request: PlayerItem): Promise<PlayerItem> {
+  async postPlayerItem(@Body() request: PlayerItem): Promise<PlayerItem> {
     return this.playerItemService.createPlayerItem(request);
   }
 
   @Put()
-  async putRarity(@Body() request: PlayerItem): Promise<PlayerItem> {
+  async putPlayerItem(@Body() request: PlayerItem): Promise<PlayerItem> {
     return this.playerItemService.updatePlayerItem(request);
   }
 
   @Delete(":id")
-  async deleteRarity(@Param("id") id: PlayerItem["id"]): Promise<PlayerItem> {
+  async deletePlayerItem(@Param("id") id: PlayerItem["id"]): Promise<PlayerItem> {
     return this.playerItemService.removeOnePlayerItem(id);
   }
 
   @Delete()
-  async deleteRarities(): Promise<PlayerItem[]> {
+  async deletePlayerItems(): Promise<PlayerItem[]> {
     return this.playerItemService.removeAllPlayerItems();
   }
 }
