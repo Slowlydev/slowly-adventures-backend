@@ -20,6 +20,7 @@ async function bootstrap() {
 
   app.use(helmet());
   app.use(compression());
+  app.enableCors();
 
   await app.listen(4000);
 }
