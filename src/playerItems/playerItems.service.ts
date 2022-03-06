@@ -8,11 +8,11 @@ export class PlayerItemService {
   constructor(@InjectRepository(PlayerItem) private readonly playerItemRepository: Repository<PlayerItem>) { }
 
   async findAllPlayerItems(): Promise<PlayerItem[]> {
-    return this.playerItemRepository.find();
+    return this.playerItemRepository.find({ relations: ['item', 'player'] });
   }
 
   async findOnePlayerItem(id: PlayerItem["id"]): Promise<PlayerItem> {
-    return this.playerItemRepository.findOne(id);
+    return this.playerItemRepository.findOne(id, { relations: ['item', 'player'] });
   }
 
   async createPlayerItem(request: PlayerItem): Promise<PlayerItem> {
