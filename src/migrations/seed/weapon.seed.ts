@@ -7,7 +7,7 @@ type Weapon = {
 export const weapons: Weapon[] = [
   {
     name: "Master Sword",
-    damage: 200,
+    damage: 220,
     rarity: 10
   },
   {
@@ -23,6 +23,36 @@ export const weapons: Weapon[] = [
   {
     name: "Acient Sword",
     damage: 150,
+    rarity: 5
+  },
+  {
+    name: "Shank",
+    damage: 40,
+    rarity: 2
+  },
+  {
+    name: "Golf Club",
+    damage: 40,
+    rarity: 2
+  },
+  {
+    name: "Glock",
+    damage: 220,
+    rarity: 10
+  },
+  {
+    name: "Damage Potion",
+    damage: 170,
+    rarity: 7
+  },
+  {
+    name: "Bow",
+    damage: 90,
+    rarity: 3
+  },
+  {
+    name: "Crossbow",
+    damage: 120,
     rarity: 4
   }
 ]
