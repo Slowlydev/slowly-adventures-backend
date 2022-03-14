@@ -24,7 +24,6 @@ export const clothings: Clothing[] = [
         protection: 100,
         rarityID: 5,
     },
-
     {
         name: "AIR FORCE 1",
         description: "its worn by every mf on earth",

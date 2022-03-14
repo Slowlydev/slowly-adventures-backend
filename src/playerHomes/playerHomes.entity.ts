@@ -7,11 +7,11 @@ export class PlayerHome {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => Player, (player) => player.playerHomes)
+  @ManyToOne(() => Player, (player) => player.playerHomes, { onDelete: "CASCADE" })
   @JoinColumn({ name: "playerID" })
   player: Player;
 
-  @ManyToOne(() => Home, (home) => home.playerHomes)
+  @ManyToOne(() => Home, (home) => home.playerHomes, { onDelete: "CASCADE" })
   @JoinColumn({ name: "homeID" })
   home: Home;
 }
