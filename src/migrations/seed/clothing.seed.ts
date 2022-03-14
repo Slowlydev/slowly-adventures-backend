@@ -66,7 +66,5 @@ export const clothings: Clothing[] = [
         description: "have you lost your mind, you have too much money",
         protection: 80,
         rarityID: 8,
-    },
-
-
+    }
 ]
